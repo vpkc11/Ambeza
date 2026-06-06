@@ -4,8 +4,18 @@ import { CheckCircle, ChevronRight } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 
 export const metadata: Metadata = {
-  title: "Air Freight Export from India",
-  description: "Fast, reliable air freight from India to 150+ countries. IATA-certified handling, all DG categories, 3–7 days transit.",
+  title: "Air Freight from India — Air Cargo Export Services | Ambeza",
+  description: "Air freight export from India to USA, UK, UAE, Singapore and 150+ countries. IATA-certified. 3–7 days transit. Operating from HYD, BOM, DEL, MAA, BLR, CCU. Get a quote in 24 hours.",
+  keywords: [
+    "air freight from India",
+    "air cargo export India",
+    "air freight India to USA",
+    "air freight India to UAE",
+    "airway bill India",
+    "air cargo Hyderabad",
+    "air freight Mumbai",
+    "IATA freight India",
+  ],
 };
 
 export default function AirFreightPage() {
@@ -78,6 +88,129 @@ export default function AirFreightPage() {
               Get an Air Freight Quote
             </Link>
           </div>
+        </div>
+      </SectionWrapper>
+
+      {/* Air vs Sea comparison */}
+      <SectionWrapper className="bg-[#F8FAFC]">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-bold text-[#0A1628] mb-3">Air freight vs Ocean freight — which is right for you?</h2>
+          <p className="text-[#475569]">A quick comparison to help you decide before you call us.</p>
+        </div>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-[#0A1628] text-white">
+                <th className="p-4 text-left rounded-tl-xl">Factor</th>
+                <th className="p-4 text-center">Air Freight</th>
+                <th className="p-4 text-center rounded-tr-xl">Ocean Freight</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ["Transit time", "3–7 days", "15–45 days"],
+                ["Cost per kg", "Higher", "Lower"],
+                ["Best for weight", "Under 500 kg", "Over 500 kg"],
+                ["Best for volume", "Under 2–3 CBM", "Over 3 CBM"],
+                ["Ideal cargo", "Pharma, gems, electronics, urgent", "Textiles, machinery, bulk goods"],
+                ["Tracking", "Real-time AWB tracking", "Vessel-level tracking"],
+                ["Risk of damage", "Lower (less handling)", "Moderate (long voyage)"],
+                ["Carbon footprint", "Higher", "Lower"],
+              ].map(([factor, air, sea], i) => (
+                <tr key={factor} className={i % 2 === 0 ? "bg-white" : "bg-[#F8FAFC]"}>
+                  <td className="p-4 font-medium text-[#0A1628] border-b border-[#E2E8F0]">{factor}</td>
+                  <td className="p-4 text-center text-[#475569] border-b border-[#E2E8F0]">{air}</td>
+                  <td className="p-4 text-center text-[#475569] border-b border-[#E2E8F0]">{sea}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <p className="text-center text-xs text-[#475569] mt-4">Not sure which to choose? <Link href="/contact" className="text-[#185FA5] font-semibold hover:underline">Talk to our team</Link> — we&apos;ll recommend based on your cargo weight, destination, and deadline.</p>
+      </SectionWrapper>
+
+      {/* Airports */}
+      <SectionWrapper>
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-bold text-[#0A1628] mb-3">Airports we operate from</h2>
+          <p className="text-[#475569]">Pan-India air cargo coverage — all major international cargo terminals.</p>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 max-w-4xl mx-auto">
+          {[
+            { code: "HYD", name: "Hyderabad", detail: "Rajiv Gandhi International" },
+            { code: "BOM", name: "Mumbai", detail: "Chhatrapati Shivaji Maharaj" },
+            { code: "DEL", name: "Delhi", detail: "Indira Gandhi International" },
+            { code: "MAA", name: "Chennai", detail: "Chennai International" },
+            { code: "BLR", name: "Bangalore", detail: "Kempegowda International" },
+            { code: "CCU", name: "Kolkata", detail: "Netaji Subhas Chandra Bose" },
+          ].map(({ code, name, detail }) => (
+            <div key={code} className="text-center bg-white border border-[#E2E8F0] rounded-xl p-4">
+              <div className="w-12 h-12 bg-[#185FA5]/10 rounded-xl flex items-center justify-center text-[#185FA5] font-bold text-xs mx-auto mb-2">{code}</div>
+              <p className="font-bold text-[#0A1628] text-sm">{name}</p>
+              <p className="text-xs text-[#475569] mt-0.5">{detail}</p>
+            </div>
+          ))}
+        </div>
+      </SectionWrapper>
+
+      {/* FAQ */}
+      <SectionWrapper className="bg-[#F8FAFC]">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl font-bold text-[#0A1628] mb-8 text-center">Air freight — frequently asked questions</h2>
+          <div className="space-y-5">
+            {[
+              {
+                q: "What is the minimum shipment size for air freight?",
+                a: "There is no minimum — we handle shipments from 1 kg upwards. Air is especially cost-effective for small, high-value cargo. For very small shipments (under 5 kg), we can also advise on courier options.",
+              },
+              {
+                q: "How is air freight charged? Actual weight vs volumetric weight?",
+                a: "Air freight is charged on the higher of actual weight (kg) and volumetric weight. Volumetric weight = (Length × Width × Height in cm) ÷ 6,000. For example, a box of 50cm × 40cm × 30cm = 60,000 ÷ 6,000 = 10 kg volumetric. If the actual weight is 4 kg, you pay for 10 kg. Use our free volumetric calculator to check before requesting a quote.",
+              },
+              {
+                q: "Can you ship dangerous goods by air?",
+                a: "Yes — we handle all IATA DG classes subject to airline acceptance. We prepare MSDS, DG Declaration, and ensure correct labelling, packaging, and packing groups. Some categories (flammable liquids, lithium batteries) have airline-specific restrictions. Contact us with your product details.",
+              },
+              {
+                q: "What documents are needed for air freight export from India?",
+                a: "You need: Commercial Invoice, Packing List, Airway Bill (issued by us), Shipping Bill (filed by our CHA on ICEGATE), IEC, and any product-specific certificates (CoO, Phytosanitary, FSSAI, etc.). If you&apos;re new to export, we help you prepare all of these.",
+              },
+              {
+                q: "How long does customs clearance take at Indian airports?",
+                a: "Most air cargo gets Green Channel clearance within 4–6 hours of Shipping Bill filing. Yellow and Red channel examinations take 12–24 hours. Our in-house CHA team is present at all airports for examinations, which speeds up clearance significantly compared to outsourced CHA agents.",
+              },
+              {
+                q: "Do you offer door-to-door air freight from India?",
+                a: "Yes — we pick up from your warehouse anywhere in India, handle customs clearance and airline booking at the origin airport, and coordinate delivery to the consignee at destination through our partner network in 150+ countries.",
+              },
+            ].map(({ q, a }) => (
+              <div key={q} className="bg-white border border-[#E2E8F0] rounded-xl p-6">
+                <p className="font-bold text-[#0A1628] mb-2">{q}</p>
+                <p className="text-sm text-[#475569] leading-relaxed">{a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </SectionWrapper>
+
+      {/* Internal links */}
+      <SectionWrapper>
+        <div className="text-center mb-6">
+          <h2 className="text-xl font-bold text-[#0A1628] mb-2">Related guides and tools</h2>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+          <Link href="/tools/volumetric-calculator" className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl p-5 hover:border-[#185FA5] transition-colors block">
+            <p className="font-semibold text-[#0A1628] text-sm mb-1">Volumetric Weight Calculator</p>
+            <p className="text-xs text-[#475569]">Find your chargeable weight instantly</p>
+          </Link>
+          <Link href="/services/ocean-freight" className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl p-5 hover:border-[#185FA5] transition-colors block">
+            <p className="font-semibold text-[#0A1628] text-sm mb-1">Ocean Freight from India</p>
+            <p className="text-xs text-[#475569]">FCL, LCL — better value for heavy cargo</p>
+          </Link>
+          <Link href="/new-exporter" className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl p-5 hover:border-[#185FA5] transition-colors block">
+            <p className="font-semibold text-[#0A1628] text-sm mb-1">First Time Exporter Guide</p>
+            <p className="text-xs text-[#475569]">IEC, LUT, documents — start here</p>
+          </Link>
         </div>
       </SectionWrapper>
     </>

@@ -6,6 +6,14 @@ import SectionWrapper from "@/components/SectionWrapper";
 export const metadata: Metadata = {
   title: "About Ambeza — End-to-End Export Logistics from India",
   description: "We built Ambeza because exporting from India should not be this hard. In-house CHA, fixed quotes, RoDTEP tracking — one company for everything.",
+  keywords: [
+    "about Ambeza",
+    "freight forwarder Hyderabad",
+    "export logistics company India",
+    "licensed CHA India",
+    "export company founded India",
+    "in-house customs agent India",
+  ],
 };
 
 const differentiators = [
@@ -86,6 +94,28 @@ export default function AboutPage() {
                   <p className="text-sm text-[#475569]">{desc}</p>
                 </div>
               </div>
+            </div>
+          ))}
+        </div>
+      </SectionWrapper>
+
+      {/* Team / credentials */}
+      <SectionWrapper>
+        <div className="text-center mb-10">
+          <h2 className="text-3xl font-bold text-[#0A1628] mb-3">The team behind Ambeza</h2>
+          <p className="text-[#475569] max-w-2xl mx-auto">We are logistics professionals, not tech entrepreneurs who discovered shipping. Our founders have spent their careers in customs, freight, and export compliance.</p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          {[
+            { stat: "2019", label: "Founded", detail: "Ambeza was started in Hyderabad to bring end-to-end transparency to Indian export logistics." },
+            { stat: "3,000+", label: "Shipments handled", detail: "Air, ocean, and customs clearance across all major Indian ports and airports." },
+            { stat: "Licensed CHA", label: "CBLR-registered", detail: "Our in-house Customs House Agents are licensed under the Customs Brokers Licensing Regulations (CBLR). We don't subcontract." },
+            { stat: "7 cities", label: "Pan-India presence", detail: "Hyderabad, Mumbai, Chennai, Delhi NCR, Mundra, Bangalore, and Kolkata — with local teams, not just agents." },
+          ].map(({ stat, label, detail }) => (
+            <div key={label} className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl p-6 text-center">
+              <p className="text-2xl font-extrabold text-[#185FA5] mb-1">{stat}</p>
+              <p className="font-bold text-[#0A1628] mb-3">{label}</p>
+              <p className="text-sm text-[#475569] leading-relaxed">{detail}</p>
             </div>
           ))}
         </div>

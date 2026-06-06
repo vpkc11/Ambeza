@@ -24,6 +24,14 @@ export const metadata: Metadata = {
   title: "Export from India to 150+ Countries | Ambeza",
   description:
     "End-to-end export logistics from India. Air freight, ocean freight, customs clearance, CHA services, all documents — one company. Get a free quote in 24 hours.",
+  keywords: [
+    "freight forwarder India",
+    "export logistics India",
+    "export from India to USA UK UAE",
+    "shipping from India",
+    "end to end export India",
+    "export company Hyderabad Mumbai Chennai",
+  ],
 };
 
 const services = [
@@ -116,9 +124,52 @@ const faqs = [
   },
 ];
 
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "I have never exported before. Can you help me?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes. We handle everything from scratch. You need your product and a buyer abroad — we manage all paperwork, customs, and shipping. Start with our New Exporter Guide.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How much does it cost to ship to the USA / UK / UAE?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Costs depend on weight, size, mode (air/sea), and destination. Use our free Shipping Estimator for a ballpark, or contact us for a fixed quote within 24 hours.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Do I need an IEC code to export?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yes — an Importer Exporter Code (IEC) is mandatory for all commercial exports from India. If you don't have one, we guide you through getting it online in 1–2 days for just ₹500.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What documents do I need to give you?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Mainly your IEC code, GST certificate, commercial invoice, and packing list. We prepare everything else — Shipping Bill, Certificate of Origin, customs clearances, and product-specific certificates.",
+      },
+    },
+  ],
+};
+
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
       {/* ── Hero ── */}
       <section
         className="relative text-white overflow-hidden"

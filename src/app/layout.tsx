@@ -39,6 +39,49 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://ambeza.com/#organization",
+      name: "Ambeza",
+      url: "https://ambeza.com",
+      logo: "https://ambeza.com/logo.png",
+      description: "End-to-end export logistics from India to 150+ countries. Air freight, ocean freight, customs clearance, CHA services, all paperwork — one company.",
+      telephone: "+918179688632",
+      foundingDate: "2019",
+      areaServed: "Worldwide",
+      serviceType: ["Air Freight", "Ocean Freight", "Customs Clearance", "Export Logistics", "CHA Services"],
+    },
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://ambeza.com/#localbusiness",
+      name: "Ambeza",
+      url: "https://ambeza.com",
+      telephone: "+918179688632",
+      description: "Licensed freight forwarder and CHA for export logistics from India.",
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Hyderabad",
+        addressRegion: "Telangana",
+        addressCountry: "IN",
+      },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 17.406498,
+        longitude: 78.47724,
+      },
+      openingHoursSpecification: {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        opens: "09:00",
+        closes: "18:00",
+      },
+    },
+  ],
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -49,6 +92,12 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">
         <Navbar />
         <main className="flex-1">{children}</main>

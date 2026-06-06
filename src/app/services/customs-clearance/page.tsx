@@ -5,7 +5,16 @@ import SectionWrapper from "@/components/SectionWrapper";
 
 export const metadata: Metadata = {
   title: "Export Customs Clearance India — Licensed CHA Services",
-  description: "In-house licensed CHA. We file your Shipping Bill on ICEGATE, handle all customs channels, and obtain LEO. RoDTEP and Drawback pre-selected correctly.",
+  description: "Licensed in-house CHA for export customs clearance across India. Shipping Bill filing on ICEGATE, all examination channels, LEO tracking, RoDTEP and Duty Drawback selection. No subcontracting.",
+  keywords: [
+    "customs clearance India",
+    "CHA services India",
+    "shipping bill filing ICEGATE",
+    "export customs agent India",
+    "LEO India",
+    "customs house agent Hyderabad Mumbai Chennai",
+    "RoDTEP Drawback filing",
+  ],
 };
 
 export default function CustomsClearancePage() {
@@ -67,6 +76,95 @@ export default function CustomsClearancePage() {
             <Link href="/contact" className="block text-center bg-[#185FA5] text-white font-semibold py-4 rounded-2xl hover:bg-[#14508a] transition-colors">
               Discuss Customs Clearance
             </Link>
+          </div>
+        </div>
+      </SectionWrapper>
+
+      {/* Examination channels */}
+      <SectionWrapper className="bg-[#F8FAFC]">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-bold text-[#0A1628] mb-3">Green, Yellow, and Red channel — what they mean</h2>
+          <p className="text-[#475569] max-w-2xl mx-auto">When your Shipping Bill is filed on ICEGATE, the customs risk engine assigns one of three examination channels. Here is what happens in each.</p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-4xl mx-auto">
+          {[
+            {
+              channel: "Green Channel",
+              color: "border-green-500 bg-green-50",
+              badge: "bg-green-500 text-white",
+              time: "~2–4 hours",
+              what: "No physical examination. Customs clears the shipment on the basis of the filed documents alone. LEO is granted automatically after document processing.",
+              when: "Most routine shipments by established exporters with clean records.",
+            },
+            {
+              channel: "Yellow Channel",
+              color: "border-amber-500 bg-amber-50",
+              badge: "bg-amber-500 text-white",
+              time: "~4–12 hours",
+              what: "Document examination — customs reviews original invoices, packing lists, licences, and certificates. No physical check of cargo. LEO granted after document verification.",
+              when: "New exporters, higher-value goods, or when risk parameters flag the shipment for a check.",
+            },
+            {
+              channel: "Red Channel",
+              color: "border-red-500 bg-red-50",
+              badge: "bg-red-500 text-white",
+              time: "~12–24 hours",
+              what: "Physical examination of cargo in addition to document check. A customs officer opens and inspects the consignment. Our CHA team is present for all red channel examinations.",
+              when: "New exporters, mis-declared cargo flags, high-risk categories, or random selection.",
+            },
+          ].map(({ channel, color, badge, time, what, when }) => (
+            <div key={channel} className={`border-2 rounded-2xl p-6 ${color}`}>
+              <div className="flex items-center justify-between mb-4">
+                <span className={`text-xs font-bold px-3 py-1 rounded-full ${badge}`}>{channel}</span>
+                <span className="text-xs text-[#475569] font-medium">~{time}</span>
+              </div>
+              <p className="text-sm text-[#0A1628] font-semibold mb-2">What happens:</p>
+              <p className="text-sm text-[#475569] mb-4 leading-relaxed">{what}</p>
+              <p className="text-sm text-[#0A1628] font-semibold mb-1">Triggered when:</p>
+              <p className="text-xs text-[#475569] leading-relaxed">{when}</p>
+            </div>
+          ))}
+        </div>
+        <div className="mt-6 max-w-4xl mx-auto">
+          <div className="bg-white border border-[#185FA5]/30 rounded-xl p-5 text-center">
+            <p className="font-semibold text-[#0A1628] mb-1">Ambeza&apos;s CHA team is physically present for Yellow and Red channel examinations</p>
+            <p className="text-sm text-[#475569]">Unlike outsourced CHA agents, our team is on-site at the examination — reducing delays and ensuring correct handling.</p>
+          </div>
+        </div>
+      </SectionWrapper>
+
+      {/* FAQ */}
+      <SectionWrapper>
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl font-bold text-[#0A1628] mb-8 text-center">Customs clearance — frequently asked questions</h2>
+          <div className="space-y-5">
+            {[
+              {
+                q: "Do I need a CHA to export from India?",
+                a: "Yes — a licensed Customs House Agent (CHA) is required to file the Shipping Bill on ICEGATE on your behalf. Under the Customs Act, only a licensed G Card or F Card holder can file export documents with customs. Ambeza employs its own licensed CHA team — no subcontracting.",
+              },
+              {
+                q: "What is a Shipping Bill and why is it important?",
+                a: "The Shipping Bill is the master export declaration — it is filed on ICEGATE before your cargo can be exported. It declares the goods, their value (FOB), HSN code, Incoterm, and whether you are claiming RoDTEP or Duty Drawback. The Let Export Order (LEO) is endorsed on the Shipping Bill once customs clears the goods.",
+              },
+              {
+                q: "How long does export customs clearance take in India?",
+                a: "Green Channel: 2–6 hours after filing. Yellow Channel: 4–12 hours. Red Channel (physical examination): 12–24 hours. Air cargo customs is generally faster than sea cargo. Ambeza's in-house CHA team accelerates clearance by being present on-site and resolving queries directly.",
+              },
+              {
+                q: "What is LEO and how do I know my cargo has been cleared?",
+                a: "Let Export Order (LEO) is the final customs clearance — it is endorsed on your Shipping Bill on ICEGATE. Until LEO is granted, your cargo cannot be loaded. Ambeza tracks LEO in real time and notifies you as soon as clearance is obtained. You can also check it yourself on ICEGATE using your Shipping Bill number.",
+              },
+              {
+                q: "What are RoDTEP and Duty Drawback, and how do I claim them?",
+                a: "RoDTEP (Remission of Duties and Taxes on Exported Products) and Duty Drawback are government refund schemes for taxes embedded in your production cost. Your CHA must select the correct scheme at the time of Shipping Bill filing — you cannot switch after LEO. Ambeza's team pre-selects the higher-benefit option for every shipment and follows up on disbursement.",
+              },
+            ].map(({ q, a }) => (
+              <div key={q} className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl p-6">
+                <p className="font-bold text-[#0A1628] mb-2">{q}</p>
+                <p className="text-sm text-[#475569] leading-relaxed">{a}</p>
+              </div>
+            ))}
           </div>
         </div>
       </SectionWrapper>
