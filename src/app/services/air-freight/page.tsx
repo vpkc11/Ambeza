@@ -18,9 +18,23 @@ export const metadata: Metadata = {
   ],
 };
 
+const airFreightFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "What is the minimum shipment size for air freight from India?", acceptedAnswer: { "@type": "Answer", text: "There is no minimum — we handle shipments from 1 kg upwards. Air is especially cost-effective for small, high-value cargo." } },
+    { "@type": "Question", name: "How is air freight charged in India?", acceptedAnswer: { "@type": "Answer", text: "Air freight is charged on the higher of actual weight (kg) and volumetric weight. Volumetric weight = (L × W × H in cm) ÷ 6,000." } },
+    { "@type": "Question", name: "How long does air freight from India to the USA take?", acceptedAnswer: { "@type": "Answer", text: "5–7 days from major Indian airports (BOM, DEL, MAA, HYD, BLR, CCU) to the USA. Add 1–2 days for customs clearance at destination." } },
+    { "@type": "Question", name: "Can you ship dangerous goods by air from India?", acceptedAnswer: { "@type": "Answer", text: "Yes — we handle all IATA DG classes subject to airline acceptance. We prepare MSDS, DG Declaration, and ensure correct labelling and packing groups." } },
+    { "@type": "Question", name: "What documents are needed for air freight export from India?", acceptedAnswer: { "@type": "Answer", text: "Commercial Invoice, Packing List, Airway Bill (issued by us), Shipping Bill (filed by our CHA on ICEGATE), IEC, and any product-specific certificates (CoO, Phytosanitary, FSSAI, etc.)." } },
+    { "@type": "Question", name: "Do you offer door-to-door air freight from India?", acceptedAnswer: { "@type": "Answer", text: "Yes — we pick up from your warehouse anywhere in India, handle customs clearance and airline booking, and coordinate delivery to the consignee in 150+ countries." } },
+  ],
+};
+
 export default function AirFreightPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(airFreightFaqSchema) }} />
       <section className="bg-gradient-to-br from-[#0A1628] to-[#1e3a5f] text-white py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
@@ -153,8 +167,52 @@ export default function AirFreightPage() {
         </div>
       </SectionWrapper>
 
-      {/* FAQ */}
+      {/* Rates table */}
       <SectionWrapper className="bg-[#F8FAFC]">
+        <div className="text-center mb-8">
+          <h2 className="text-2xl font-bold text-[#0A1628] mb-3">Air freight rates from India — indicative 2025</h2>
+          <p className="text-[#475569] text-sm max-w-2xl mx-auto">Rates shown are approximate all-in ranges per chargeable kg (higher of actual or volumetric). Actual quotes depend on volume, commodity, and airline availability. Contact us for a fixed quote within 24 hours.</p>
+        </div>
+        <div className="overflow-x-auto mb-6">
+          <table className="w-full text-sm border-collapse">
+            <thead>
+              <tr className="bg-[#0A1628] text-white">
+                <th className="p-4 text-left rounded-tl-xl">Destination</th>
+                <th className="p-4 text-center">Transit time</th>
+                <th className="p-4 text-center">Rate range (per kg)</th>
+                <th className="p-4 text-center rounded-tr-xl">Min. chargeable</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                ["India → USA (JFK / LAX)", "5–7 days", "₹350–600", "45 kg"],
+                ["India → UK (LHR)", "4–6 days", "₹280–480", "45 kg"],
+                ["India → UAE (DXB)", "2–3 days", "₹120–250", "45 kg"],
+                ["India → Singapore (SIN)", "3–5 days", "₹180–320", "45 kg"],
+                ["India → Germany (FRA)", "4–6 days", "₹300–500", "45 kg"],
+                ["India → Australia (SYD)", "5–7 days", "₹380–620", "45 kg"],
+                ["India → Canada (YYZ)", "5–7 days", "₹360–580", "45 kg"],
+                ["India → South Africa (JNB)", "4–6 days", "₹320–520", "45 kg"],
+              ].map(([route, transit, rate, min], i) => (
+                <tr key={route} className={i % 2 === 0 ? "bg-white" : "bg-[#F8FAFC]"}>
+                  <td className="p-4 font-medium text-[#0A1628] border-b border-[#E2E8F0]">{route}</td>
+                  <td className="p-4 text-center text-[#475569] border-b border-[#E2E8F0]">{transit}</td>
+                  <td className="p-4 text-center font-semibold text-[#185FA5] border-b border-[#E2E8F0]">{rate}</td>
+                  <td className="p-4 text-center text-[#475569] border-b border-[#E2E8F0]">{min}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 text-center max-w-2xl mx-auto">
+          <p className="text-xs text-amber-800 leading-relaxed">
+            <span className="font-bold">Important:</span> All rates are indicative Q2 2025 market ranges and exclude fuel surcharge, security surcharge, and destination handling. Final rates are fixed at time of booking. <Link href="/contact" className="font-bold underline">Get an exact quote →</Link>
+          </p>
+        </div>
+      </SectionWrapper>
+
+      {/* FAQ */}
+      <SectionWrapper className="bg-white">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-2xl font-bold text-[#0A1628] mb-8 text-center">Air freight — frequently asked questions</h2>
           <div className="space-y-5">

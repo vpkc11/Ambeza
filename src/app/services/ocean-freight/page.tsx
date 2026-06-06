@@ -26,9 +26,22 @@ const containerTypes = [
   { type: "Flat Rack", capacity: "Oversize cargo", bestFor: "Machinery, vehicles, oversized equipment" },
 ];
 
+const oceanFreightFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "What is the minimum cargo size for ocean freight from India?", acceptedAnswer: { "@type": "Answer", text: "There is no hard minimum — LCL shipments can be as small as 0.1 CBM. However, for cargo below 500 kg or 2 CBM, air freight is often cheaper once LCL handling and port fees are added." } },
+    { "@type": "Question", name: "FCL or LCL — which is better value for Indian exporters?", acceptedAnswer: { "@type": "Answer", text: "The crossover is typically 12–15 CBM or 5,000 kg. Below this, LCL is usually cheaper. Above this, FCL gives a dedicated container, lower damage risk, and faster transit." } },
+    { "@type": "Question", name: "How long does ocean freight from India to the USA take?", acceptedAnswer: { "@type": "Answer", text: "Mumbai (JNPT) to Los Angeles: 22–26 days. Mumbai to New York: 28–32 days. Chennai to Los Angeles: 26–30 days. Add 3–5 days for destination customs and inland delivery." } },
+    { "@type": "Question", name: "What documents do I need for ocean freight export from India?", acceptedAnswer: { "@type": "Answer", text: "Commercial Invoice, Packing List, Bill of Lading (issued by the shipping line), Shipping Bill (filed by our CHA on ICEGATE), IEC, and Certificate of Origin if required by the destination country." } },
+    { "@type": "Question", name: "Can you handle reefer containers for cold chain exports from India?", acceptedAnswer: { "@type": "Answer", text: "Yes — we book and manage reefer FCL and LCL for pharma, seafood, fresh produce, and temperature-sensitive chemicals from all major Indian ports." } },
+  ],
+};
+
 export default function OceanFreightPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(oceanFreightFaqSchema) }} />
       <section className="bg-gradient-to-br from-[#0A1628] to-[#1e3a5f] text-white py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">

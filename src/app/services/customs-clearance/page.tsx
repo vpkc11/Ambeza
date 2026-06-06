@@ -17,9 +17,22 @@ export const metadata: Metadata = {
   ],
 };
 
+const customsFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "Do I need a CHA to export from India?", acceptedAnswer: { "@type": "Answer", text: "Yes — a licensed Customs House Agent (CHA) is required to file the Shipping Bill on ICEGATE. Only a licensed G Card or F Card holder under CBLR 2018 can file export documents with customs. Ambeza employs its own licensed CHA team." } },
+    { "@type": "Question", name: "What is a Shipping Bill and why is it important?", acceptedAnswer: { "@type": "Answer", text: "The Shipping Bill is the master export declaration filed on ICEGATE before cargo can be exported. It declares the goods, their FOB value, HSN code, and whether you are claiming RoDTEP or Duty Drawback. The Let Export Order (LEO) is endorsed on it once customs clears the goods." } },
+    { "@type": "Question", name: "What is LEO (Let Export Order)?", acceptedAnswer: { "@type": "Answer", text: "Let Export Order (LEO) is the final customs clearance endorsed on your Shipping Bill on ICEGATE. Cargo cannot be loaded until LEO is granted. Ambeza tracks LEO in real time and notifies you as soon as clearance is obtained." } },
+    { "@type": "Question", name: "What are Green, Yellow, and Red channels in Indian customs?", acceptedAnswer: { "@type": "Answer", text: "Green Channel: no physical examination, LEO granted on documents alone (2–4 hours). Yellow Channel: document examination only (4–12 hours). Red Channel: physical examination of cargo plus documents (12–24 hours). Ambeza's CHA team is present on-site for all channels." } },
+    { "@type": "Question", name: "What are RoDTEP and Duty Drawback?", acceptedAnswer: { "@type": "Answer", text: "RoDTEP and Duty Drawback are government refund schemes for taxes embedded in export production costs. Your CHA must select the correct scheme at Shipping Bill filing — you cannot switch after LEO. Ambeza pre-selects the higher-benefit option for every shipment." } },
+  ],
+};
+
 export default function CustomsClearancePage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(customsFaqSchema) }} />
       <section className="bg-gradient-to-br from-[#0A1628] to-[#1e3a5f] text-white py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">

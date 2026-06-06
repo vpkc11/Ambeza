@@ -2,11 +2,35 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import SectionWrapper from "@/components/SectionWrapper";
 
-export const metadata: Metadata = { title: "Inland Transport for Exports — Pan-India Pickup", description: "First-mile cargo pickup anywhere in India. ODC, flatbeds, reefer trucks, standard vehicles. GPS-tracked fleet." };
+export const metadata: Metadata = {
+  title: "Inland Transport for Exports — Pan-India Cargo Pickup | Ambeza",
+  description: "First-mile cargo pickup from factory, warehouse, or farm to any Indian port or airport. ODC, reefer, flatbed, and standard container trucks. GPS-tracked. Pan-India coverage.",
+  keywords: [
+    "inland transport export India",
+    "cargo pickup India",
+    "first mile logistics India",
+    "ODC transport India",
+    "factory to port transport India",
+    "reefer truck India export",
+    "container truck India",
+  ],
+};
+
+const inlandFaqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    { "@type": "Question", name: "Do you offer pickup from anywhere in India?", acceptedAnswer: { "@type": "Answer", text: "Yes — we have pan-India coverage. Whether your factory is in a metro or a smaller industrial town, we arrange pickup and transport to the nearest port or airport. Contact us with your location and we will confirm availability." } },
+    { "@type": "Question", name: "What types of trucks do you operate?", acceptedAnswer: { "@type": "Answer", text: "We operate standard container trucks (20ft, 40ft), LCL part-load vehicles, reefer trucks for cold chain, flatbed and low-bed trailers for ODC cargo, and high-bed trailers for machinery and project cargo." } },
+    { "@type": "Question", name: "Can you handle ODC (Over Dimensional Cargo)?", acceptedAnswer: { "@type": "Answer", text: "Yes — we handle ODC and heavy project cargo including industrial machinery, transformers, generators, and oversized equipment. We arrange route surveys, police escorts where required, and low-bed or modular trailers." } },
+    { "@type": "Question", name: "How is inland transport priced?", acceptedAnswer: { "@type": "Answer", text: "Inland transport is priced per trip based on origin city, destination port or airport, cargo weight and dimensions, and vehicle type. Contact us with your pickup location and cargo details for a fixed quote." } },
+  ],
+};
 
 export default function InlandTransportPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(inlandFaqSchema) }} />
       <section className="bg-gradient-to-br from-[#0A1628] to-[#1e3a5f] text-white py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
@@ -34,6 +58,25 @@ export default function InlandTransportPage() {
         </div>
         <div className="text-center">
           <Link href="/contact" className="bg-[#185FA5] text-white font-semibold px-8 py-4 rounded-full hover:bg-[#14508a] transition-colors inline-block">Get a Pickup Quote</Link>
+        </div>
+      </SectionWrapper>
+
+      <SectionWrapper className="bg-[#F8FAFC]">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-2xl font-bold text-[#0A1628] mb-8 text-center">Inland transport — frequently asked questions</h2>
+          <div className="space-y-5">
+            {[
+              { q: "Do you offer pickup from anywhere in India?", a: "Yes — we have pan-India coverage. Whether your factory is in a metro or a smaller industrial town, we arrange pickup and transport to the nearest port or airport. Contact us with your location and we will confirm availability and provide a quote." },
+              { q: "What types of trucks do you operate?", a: "We operate standard container trucks (20ft, 40ft), LCL part-load vehicles for shared consignments, reefer trucks for cold chain cargo, flatbed and low-bed trailers for ODC cargo, and high-bed trailers for machinery and project cargo." },
+              { q: "Can you handle ODC (Over Dimensional Cargo)?", a: "Yes — we handle ODC and heavy project cargo including industrial machinery, transformers, generators, and oversized equipment. We arrange route surveys, police escorts where required, and low-bed or modular trailers." },
+              { q: "Is GPS tracking available for my shipment?", a: "Yes — our fleet is GPS-tracked and you receive regular updates on cargo location. For high-value or time-critical cargo, we can provide live tracking links." },
+            ].map(({ q, a }) => (
+              <div key={q} className="bg-white border border-[#E2E8F0] rounded-xl p-6">
+                <p className="font-bold text-[#0A1628] mb-2">{q}</p>
+                <p className="text-sm text-[#475569] leading-relaxed">{a}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </SectionWrapper>
     </>

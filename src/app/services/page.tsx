@@ -7,6 +7,15 @@ export const metadata: Metadata = {
   title: "Export Logistics Services — Air, Sea, Customs, Warehousing",
   description:
     "Ambeza offers end-to-end export services: air freight, ocean freight, customs clearance (CHA), warehousing, and inland transport from anywhere in India.",
+  keywords: [
+    "export logistics services India",
+    "air freight ocean freight India",
+    "customs clearance CHA India",
+    "export warehousing India",
+    "inland transport export India",
+    "end to end export services India",
+    "freight forwarder services India",
+  ],
 };
 
 const services = [
