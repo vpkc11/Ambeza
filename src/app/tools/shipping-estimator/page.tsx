@@ -441,7 +441,7 @@ export default function ShippingEstimatorPage() {
                   Get a Firm Quote — Free, within 24 hours
                 </Link>
                 <a
-                  href={`https://wa.me/919999999999?text=Hi, I used the estimator: ${origin} to ${destination}, ${shipMode}, ~${weight}kg. Can you give me a firm quote?`}
+                  href={`https://wa.me/918179688632?text=Hi, I used the estimator: ${origin} to ${destination}, ${shipMode}, ~${weight}kg. Can you give me a firm quote?`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block text-center bg-[#25D366] text-white font-semibold py-4 rounded-full hover:bg-[#128C7E] transition-colors"

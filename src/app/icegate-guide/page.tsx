@@ -420,7 +420,7 @@ export default function IcegateGuidePage() {
                 ))}
               </ul>
               <a
-                href="https://wa.me/919999999999?text=Hi, I need help with ICEGATE and AD Code registration"
+                href="https://wa.me/918179688632?text=Hi, I need help with ICEGATE and AD Code registration"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-xl font-semibold hover:bg-[#20bf5b] transition-colors"

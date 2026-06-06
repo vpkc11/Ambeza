@@ -213,7 +213,7 @@ export default function DGGuidePage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/919999999999?text=Hi, I need to ship a Dangerous Good from India. Product:"
+              href="https://wa.me/918179688632?text=Hi, I need to ship a Dangerous Good from India. Product:"
               target="_blank"
               rel="noopener noreferrer"
               className="bg-[#25D366] text-white font-semibold px-8 py-3.5 rounded-full hover:bg-[#128C7E] transition-colors inline-flex items-center gap-2"

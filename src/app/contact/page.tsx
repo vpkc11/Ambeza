@@ -41,7 +41,7 @@ export default function ContactPage() {
               <h2 className="text-2xl font-bold text-[#0A1628] mb-5">Contact directly</h2>
               <div className="space-y-4">
                 <a
-                  href="https://wa.me/919999999999?text=Hi, I want to enquire about export shipping from India"
+                  href="https://wa.me/918179688632?text=Hi, I want to enquire about export shipping from India"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center gap-4 bg-[#25D366]/10 border border-[#25D366]/30 rounded-xl p-4 hover:bg-[#25D366]/20 transition-colors"
@@ -53,13 +53,13 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-bold text-[#0A1628]">WhatsApp — fastest response</p>
-                    <p className="text-[#25D366] font-semibold">+91 99999 99999</p>
+                    <p className="text-[#25D366] font-semibold">+91 81796 88632</p>
                     <p className="text-xs text-[#475569]">We reply within 2 hours</p>
                   </div>
                 </a>
 
                 <a
-                  href="tel:+919999999999"
+                  href="tel:+918179688632"
                   className="flex items-center gap-4 bg-[#185FA5]/5 border border-[#185FA5]/20 rounded-xl p-4 hover:bg-[#185FA5]/10 transition-colors"
                 >
                   <div className="w-12 h-12 bg-[#185FA5] rounded-full flex items-center justify-center flex-shrink-0">
@@ -69,7 +69,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <p className="font-bold text-[#0A1628]">Call us</p>
-                    <p className="text-[#185FA5] font-semibold">+91 99999 99999</p>
+                    <p className="text-[#185FA5] font-semibold">+91 81796 88632</p>
                     <p className="text-xs text-[#475569]">Mon–Sat, 9am–7pm IST</p>
                   </div>
                 </a>

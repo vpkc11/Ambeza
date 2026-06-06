@@ -383,7 +383,7 @@ export default function HSNCheckerPage() {
             Send us your HSN code on WhatsApp. Our team will tell you exactly what documents you need and if there are any restrictions.
           </p>
           <a
-            href="https://wa.me/919999999999?text=Hi, I need help with HSN code document requirements. My HSN is:"
+            href="https://wa.me/918179688632?text=Hi, I need help with HSN code document requirements. My HSN is:"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-[#25D366] text-white font-semibold px-7 py-3 rounded-full hover:bg-[#128C7E] transition-colors"

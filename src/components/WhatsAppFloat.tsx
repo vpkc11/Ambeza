@@ -3,7 +3,7 @@
 export default function WhatsAppFloat() {
   return (
     <a
-      href="https://wa.me/919999999999?text=Hi, I want to enquire about export shipping from India"
+      href="https://wa.me/918179688632?text=Hi, I want to enquire about export shipping from India"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white rounded-full p-4 shadow-lg hover:bg-[#128C7E] transition-colors flex items-center gap-2 group"

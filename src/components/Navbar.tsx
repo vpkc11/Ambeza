@@ -217,7 +217,7 @@ export default function Navbar() {
       {/* Top bar */}
       <div className="bg-[#185FA5] text-white text-xs py-1.5 text-center">
         <a
-          href="https://wa.me/919999999999?text=Hi, I want to enquire about export shipping"
+          href="https://wa.me/918179688632?text=Hi, I want to enquire about export shipping"
           className="hover:underline"
           target="_blank"
           rel="noopener noreferrer"

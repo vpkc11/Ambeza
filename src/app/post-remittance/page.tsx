@@ -566,7 +566,7 @@ export default function PostRemittancePage() {
               We audit your open export entries and tell you exactly what needs to be done — no obligation.
             </p>
             <a
-              href="https://wa.me/919999999999?text=Hi, I need help with post-remittance compliance and export entry closure"
+              href="https://wa.me/918179688632?text=Hi, I need help with post-remittance compliance and export entry closure"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-[#25D366] text-white px-7 py-3 rounded-xl font-semibold hover:bg-[#20bf5b] transition-colors"

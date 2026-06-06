@@ -227,7 +227,7 @@ export default function PortSelectorPage() {
               )}
               <div className="mt-4 flex gap-3">
                 <a
-                  href="https://wa.me/919999999999?text=Hi, I need help with port selection and export logistics from India"
+                  href="https://wa.me/918179688632?text=Hi, I need help with port selection and export logistics from India"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 bg-[#25D366] text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-[#20bf5b] transition-colors"
@@ -411,7 +411,7 @@ export default function PortSelectorPage() {
                 Ambeza has clearing agents and warehouse partners at all major Indian sea ports and airports. We choose the best routing for your cargo.
               </p>
               <a
-                href="https://wa.me/919999999999?text=Hi, I need help selecting the right port for my export shipment"
+                href="https://wa.me/918179688632?text=Hi, I need help selecting the right port for my export shipment"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-[#25D366] text-white px-6 py-3 rounded-xl font-semibold hover:bg-[#20bf5b] transition-colors"
