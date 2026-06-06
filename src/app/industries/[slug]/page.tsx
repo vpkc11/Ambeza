@@ -79,6 +79,10 @@ const industriesData: Record<string, {
   },
 };
 
+export function generateStaticParams() {
+  return Object.keys(industriesData).map((slug) => ({ slug }));
+}
+
 type Props = { params: Promise<{ slug: string }> };
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
