@@ -1,0 +1,124 @@
+/* ─────────────────────────────────────────────
+   prose-ambeza — blog article body styling
+   Add this block to the bottom of globals.css
+   ───────────────────────────────────────────── */
+
+.prose-ambeza {
+  color: #0F172A;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.prose-ambeza h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0A1628;
+  margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.prose-ambeza h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #0A1628;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose-ambeza p {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  color: #475569;
+}
+
+.prose-ambeza a {
+  color: #185FA5;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.prose-ambeza a:hover {
+  color: #0f4a85;
+}
+
+.prose-ambeza strong {
+  font-weight: 700;
+  color: #0F172A;
+}
+
+.prose-ambeza ul,
+.prose-ambeza ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.prose-ambeza ul {
+  list-style-type: disc;
+}
+
+.prose-ambeza ol {
+  list-style-type: decimal;
+}
+
+.prose-ambeza li {
+  margin-bottom: 0.4rem;
+  color: #475569;
+}
+
+.prose-ambeza table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+}
+
+.prose-ambeza th {
+  background-color: #0A1628;
+  color: white;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-weight: 600;
+}
+
+.prose-ambeza td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #E2E8F0;
+  color: #475569;
+}
+
+.prose-ambeza tr:nth-child(even) td {
+  background-color: #F8FAFC;
+}
+
+.prose-ambeza blockquote {
+  border-left: 4px solid #185FA5;
+  background-color: #F8FAFC;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  border-radius: 0 0.75rem 0.75rem 0;
+}
+
+.prose-ambeza blockquote p {
+  color: #0F172A;
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+.prose-ambeza code {
+  font-family: var(--font-mono), monospace;
+  font-size: 0.875em;
+  background-color: #F1F5F9;
+  padding: 0.15em 0.4em;
+  border-radius: 0.25rem;
+  color: #185FA5;
+}
+
+@media (max-width: 640px) {
+  .prose-ambeza h2 {
+    font-size: 1.25rem;
+  }
+  .prose-ambeza {
+    font-size: 0.9375rem;
+  }
+}

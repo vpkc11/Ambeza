@@ -258,6 +258,12 @@ export default function Navbar() {
               >
                 About
               </Link>
+              <Link
+                href="/blog"
+                className="text-sm font-medium text-[#0F172A] hover:text-[#185FA5] transition-colors"
+              >
+                Blog
+              </Link>
             </div>
 
             {/* CTA */}
@@ -325,6 +331,9 @@ export default function Navbar() {
               </Link>
               <Link href="/about" className="block py-2 text-sm font-medium text-[#0F172A]">
                 About
+              </Link>
+              <Link href="/blog" className="block py-2 text-sm font-medium text-[#0F172A]">
+                Blog
               </Link>
               <div className="pt-2">
                 <Link
