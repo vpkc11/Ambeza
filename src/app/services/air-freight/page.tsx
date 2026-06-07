@@ -256,7 +256,11 @@ export default function AirFreightPage() {
         <div className="text-center mb-6">
           <h2 className="text-xl font-bold text-[#0A1628] mb-2">Related guides and tools</h2>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+          <Link href="/services/air-freight/airline-partners" className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl p-5 hover:border-[#185FA5] transition-colors block">
+            <p className="font-semibold text-[#0A1628] text-sm mb-1">Airline Partners</p>
+            <p className="text-xs text-[#475569]">Carriers we work with — Indian and international</p>
+          </Link>
           <Link href="/tools/volumetric-calculator" className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-xl p-5 hover:border-[#185FA5] transition-colors block">
             <p className="font-semibold text-[#0A1628] text-sm mb-1">Volumetric Weight Calculator</p>
             <p className="text-xs text-[#475569]">Find your chargeable weight instantly</p>
