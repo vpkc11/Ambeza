@@ -31,6 +31,7 @@ import { cn } from "@/lib/utils";
 
 const servicesLinks = [
   { href: "/services/air-freight", label: "Air Freight", icon: Plane },
+  { href: "/services/air-freight/airline-partners", label: "Airline Partners", icon: Globe },
   { href: "/services/ocean-freight", label: "Ocean Freight", icon: Ship },
   { href: "/services/customs-clearance", label: "Customs Clearance", icon: FileText },
   { href: "/services/warehousing", label: "Warehousing & 3PL", icon: Warehouse },
