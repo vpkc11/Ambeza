@@ -18,6 +18,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ambeza.com"),
+  alternates: {
+    canonical: "./",
+  },
   title: {
     default: "Ambeza — Export Logistics from India to the World",
     template: "%s | Ambeza",

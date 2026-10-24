@@ -19,6 +19,7 @@ import {
 } from "@/components/ui/accordion";
 import QuoteForm from "@/components/QuoteForm";
 import SectionWrapper from "@/components/SectionWrapper";
+import TaxInvoiceTemplate from "@/components/TaxInvoiceTemplate";
 
 export const metadata: Metadata = {
   title: "Export from India to 150+ Countries | Ambeza",
@@ -245,6 +246,70 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* ── Commercial Air Freight ── */}
+      <section className="bg-slate-900 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16">
+          <div className="max-w-4xl">
+            <span className="inline-flex rounded-full bg-amber-500 px-4 py-2 text-xs sm:text-sm font-bold tracking-wide text-slate-950">
+              COMMERCIAL AIR CARGO &amp; EXPRESS ALTERNATIVE
+            </span>
+            <h2 className="mt-6 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+              Ship Heavy Air Cargo at{" "}
+              <span className="text-amber-400">Wholesale Commercial Rates</span>
+            </h2>
+            <p className="mt-5 max-w-3xl text-base sm:text-lg leading-relaxed text-slate-300">
+              Stop paying inflated retail parcel prices for heavy international shipments. Whether moving commercial cargo, exporter samples, or personal boxes (20kg+), book directly onto commercial airlines from any major airport hub in India.
+            </p>
+          </div>
+
+          <div className="mt-8 grid gap-3 md:grid-cols-3">
+            {[
+              "✓ Up to 40% Cheaper for 20kg+",
+              "✓ Direct Airport Hub Pickups (BOM, DEL, HYD, BLR, MAA, CCU)",
+              "✓ In-House CHA Customs Clearance",
+            ].map((feature) => (
+              <div
+                key={feature}
+                className="rounded-xl border border-slate-700 bg-slate-800 px-5 py-4 font-medium text-slate-100"
+              >
+                {feature}
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-6 flex flex-col gap-2 rounded-2xl border border-amber-400/50 bg-amber-400/10 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-wide text-amber-300">
+                Ambeza agency &amp; CHA fee
+              </p>
+              <p className="mt-1 text-sm text-slate-300">
+                A fixed handling fee — not a percentage of your shipment invoice value.
+              </p>
+            </div>
+            <p className="text-2xl font-extrabold text-amber-300 sm:whitespace-nowrap">
+              ₹5,000–₹10,000
+            </p>
+          </div>
+
+          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <Link
+              href="/tools/shipping-estimator"
+              className="rounded-full bg-amber-500 px-7 py-3.5 text-center font-semibold text-slate-950 transition-colors hover:bg-amber-400"
+            >
+              Get Air Rates
+            </Link>
+            <Link
+              href="/services/air-freight"
+              className="rounded-full border border-slate-500 px-7 py-3.5 text-center font-semibold text-white transition-colors hover:border-amber-400 hover:text-amber-300"
+            >
+              Explore Air Cargo
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <TaxInvoiceTemplate />
 
       {/* ── What We Do ── */}
       <SectionWrapper className="bg-[#F8FAFC]">

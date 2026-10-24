@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { CheckCircle, ChevronRight } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
+import TaxInvoiceTemplate from "@/components/TaxInvoiceTemplate";
 
 export const metadata: Metadata = {
   title: "Air Freight from India — Air Cargo Export Services | Ambeza",
@@ -104,6 +105,8 @@ export default function AirFreightPage() {
           </div>
         </div>
       </SectionWrapper>
+
+      <TaxInvoiceTemplate />
 
       {/* Air vs Sea comparison */}
       <SectionWrapper className="bg-[#F8FAFC]">
