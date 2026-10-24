@@ -21,5 +21,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/new-exporter`, lastModified, changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/icegate-guide`, lastModified, changeFrequency: "monthly", priority: 0.7 },
     { url: `${baseUrl}/documents-guide`, lastModified, changeFrequency: "monthly", priority: 0.7 },
+    { url: `${baseUrl}/faq`, lastModified, changeFrequency: "monthly", priority: 0.8 },
   ];
 }

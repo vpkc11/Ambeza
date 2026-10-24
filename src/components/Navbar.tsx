@@ -271,6 +271,12 @@ export default function Navbar() {
               >
                 Blog
               </Link>
+              <Link
+                href="/faq"
+                className="rounded-full bg-amber-100 px-3 py-2 text-sm font-bold text-amber-900 transition-colors hover:bg-amber-200"
+              >
+                FAQ Hub
+              </Link>
             </div>
 
             {/* CTA */}
@@ -381,6 +387,9 @@ export default function Navbar() {
               </Link>
               <Link href="/blog" onClick={() => setMobileOpen(false)} className="block min-h-11 py-3 text-sm font-medium text-[#0F172A]">
                 Blog
+              </Link>
+              <Link href="/faq" onClick={() => setMobileOpen(false)} className="block min-h-11 rounded-lg bg-amber-50 px-3 py-3 text-sm font-bold text-amber-900">
+                FAQ Hub · 100+ Exporter Answers
               </Link>
               </div>
             </div>
