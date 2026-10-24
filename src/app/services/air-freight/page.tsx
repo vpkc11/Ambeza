@@ -40,8 +40,8 @@ export default function AirFreightPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <p className="text-[#185FA5] font-semibold text-sm mb-3 uppercase tracking-wider">Services</p>
-            <h1 className="text-4xl font-bold mb-4">Air Freight from India</h1>
-            <p className="text-slate-300 text-lg">When speed matters, we fly it. Air freight from all major Indian airports to 150+ destinations — pharma, gems, electronics, urgent cargo.</p>
+            <h1 className="mb-4 text-3xl font-bold sm:text-5xl lg:text-6xl">Air Freight from India</h1>
+            <p className="text-sm text-slate-300 sm:text-base">When speed matters, we fly it. Air freight from all major Indian airports to 150+ destinations — pharma, gems, electronics, urgent cargo.</p>
           </div>
         </div>
       </section>
@@ -152,7 +152,7 @@ export default function AirFreightPage() {
           <h2 className="text-2xl font-bold text-[#0A1628] mb-3">Airports we operate from</h2>
           <p className="text-[#475569]">Pan-India air cargo coverage — all major international cargo terminals.</p>
         </div>
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 max-w-4xl mx-auto">
+        <div className="mx-auto grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-6">
           {[
             { code: "HYD", name: "Hyderabad", detail: "Rajiv Gandhi International" },
             { code: "BOM", name: "Mumbai", detail: "Chhatrapati Shivaji Maharaj" },

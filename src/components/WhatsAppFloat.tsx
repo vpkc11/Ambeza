@@ -6,7 +6,7 @@ export default function WhatsAppFloat() {
       href="https://wa.me/918179688632?text=Hi, I want to enquire about export shipping from India"
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-6 right-6 z-50 bg-[#25D366] text-white rounded-full p-4 shadow-lg hover:bg-[#128C7E] transition-colors flex items-center gap-2 group"
+      className="fixed bottom-4 right-4 z-50 flex items-center gap-2 rounded-full bg-[#25D366] p-3 text-white shadow-lg transition-colors hover:bg-[#128C7E] sm:bottom-6 sm:right-6 sm:p-4"
       aria-label="Chat on WhatsApp"
     >
       <svg

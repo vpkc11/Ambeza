@@ -106,7 +106,7 @@ export default function TaxInvoiceTemplate() {
             </div>
 
             <div
-              className="mt-1.5 grid grid-cols-2 gap-1.5 bg-slate-50 p-1.5 sm:grid-cols-4"
+              className="mt-1.5 grid grid-cols-1 gap-1.5 bg-slate-50 p-1.5 sm:grid-cols-2 lg:grid-cols-4"
               style={{ border }}
             >
               <PlaceholderField label="GSTIN" value="[ISSUER GSTIN]" />
@@ -116,7 +116,7 @@ export default function TaxInvoiceTemplate() {
             </div>
           </div>
 
-          <div className="grid gap-0 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-0 sm:grid-cols-2">
             <div className="p-2" style={{ borderBottom: border }}>
               <h4 className="mb-1 text-[9px] font-bold uppercase tracking-wider text-slate-700">
                 Bill to
@@ -211,12 +211,12 @@ export default function TaxInvoiceTemplate() {
             </table>
           </div>
 
-          <div className="grid gap-2 p-2 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-2 p-2 sm:grid-cols-2">
             <div>
               <h4 className="mb-0.5 text-[9px] font-bold uppercase tracking-wider text-slate-700">
                 Bank details
               </h4>
-              <div className="grid grid-cols-2 gap-1 bg-slate-50 p-1.5" style={{ border }}>
+              <div className="grid grid-cols-1 gap-1 bg-slate-50 p-1.5 sm:grid-cols-2" style={{ border }}>
                 <PlaceholderField label="Bank and branch" value="[BANK / BRANCH]" />
                 <PlaceholderField label="Account name" value="[ACCOUNT NAME]" />
                 <PlaceholderField label="Account number" value="[ACCOUNT NO]" />
@@ -250,7 +250,7 @@ export default function TaxInvoiceTemplate() {
             </div>
           </div>
 
-          <div className="grid gap-2 border-t border-black p-2 sm:grid-cols-2">
+          <div className="grid grid-cols-1 gap-2 border-t border-black p-2 sm:grid-cols-2">
             <div>
               <h4 className="mb-0.5 text-[9px] font-bold uppercase tracking-wider text-slate-700">
                 Declaration

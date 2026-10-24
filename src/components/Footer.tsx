@@ -52,8 +52,8 @@ const guideGroups = [
 export default function Footer() {
   return (
     <footer className="bg-[#0A1628] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
+      <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+        <div className="grid grid-cols-1 gap-8 sm:gap-10 md:grid-cols-2 lg:grid-cols-5">
 
           {/* About */}
           <div className="lg:col-span-1">
@@ -113,7 +113,7 @@ export default function Footer() {
           {/* Export Guides — two mini-columns */}
           <div className="lg:col-span-2">
             <h3 className="text-xs font-semibold uppercase tracking-wider text-slate-300 mb-4">Export Guides</h3>
-            <div className="grid grid-cols-2 gap-x-6 gap-y-5">
+            <div className="grid grid-cols-1 gap-x-6 gap-y-5 sm:grid-cols-2">
               {guideGroups.map(({ heading, links }) => (
                 <div key={heading}>
                   <p className="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-2">{heading}</p>

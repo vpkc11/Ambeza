@@ -37,7 +37,7 @@ export default function CustomsClearancePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <p className="text-[#185FA5] font-semibold text-sm mb-3 uppercase tracking-wider">Services</p>
-            <h1 className="text-4xl font-bold mb-4">Export Customs Clearance</h1>
+            <h1 className="mb-4 text-3xl font-bold sm:text-5xl lg:text-6xl">Export Customs Clearance</h1>
             <p className="text-slate-300 text-lg">Our in-house licensed Customs House Agents (CHA) file your Shipping Bill on ICEGATE, handle all examination channels, and ensure your LEO is obtained without delays.</p>
           </div>
         </div>
@@ -48,9 +48,9 @@ export default function CustomsClearancePage() {
             <div className="bg-[#185FA5]/10 border border-[#185FA5]/20 rounded-2xl p-6 mb-6">
               <div className="flex items-center gap-3 mb-3">
                 <ShieldCheck className="h-6 w-6 text-[#185FA5]" />
-                <h3 className="font-bold text-[#0A1628]">In-house CHA — we don't subcontract</h3>
+                <h3 className="font-bold text-[#0A1628]">In-house CHA — we don&apos;t subcontract</h3>
               </div>
-              <p className="text-sm text-[#475569]">Most freight forwarders hand your Shipping Bill to a third-party CHA. We don't. Our own licensed CHA team files directly on ICEGATE. This means faster clearance, direct accountability, and you know exactly who is handling your cargo.</p>
+              <p className="text-sm text-[#475569]">Most freight forwarders hand your Shipping Bill to a third-party CHA. We don&apos;t. Our own licensed CHA team files directly on ICEGATE. This means faster clearance, direct accountability, and you know exactly who is handling your cargo.</p>
             </div>
             <h2 className="text-xl font-bold text-[#0A1628] mb-4">What our CHA service includes</h2>
             <ul className="space-y-3">

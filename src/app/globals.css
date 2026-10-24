@@ -102,8 +102,14 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-inter), system-ui, sans-serif;
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
   }
   html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
     scroll-behavior: smooth;
   }
 }
@@ -114,5 +120,5 @@
 }
 
 .section-padding {
-  @apply py-16 lg:py-24;
+  @apply py-8 sm:py-12 lg:py-16;
 }

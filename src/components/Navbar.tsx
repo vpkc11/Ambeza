@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import {
   ChevronDown,
   Menu,
@@ -78,11 +77,6 @@ const guidesColumns = [
     ],
   },
 ];
-
-// All guides flattened for mobile
-const allGuideLinks = guidesColumns.flatMap((col) =>
-  col.links.map((l) => ({ ...l, group: col.heading }))
-);
 
 function DropdownMenu({
   label,
@@ -195,7 +189,6 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
-  const pathname = usePathname();
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 10);
@@ -204,8 +197,20 @@ export default function Navbar() {
   }, []);
 
   useEffect(() => {
-    setMobileOpen(false);
-  }, [pathname]);
+    if (!mobileOpen) return;
+
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMobileOpen(false);
+    };
+
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", closeOnEscape);
+
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", closeOnEscape);
+    };
+  }, [mobileOpen]);
 
   const mobileSections = [
     { label: "Services", links: servicesLinks },
@@ -219,7 +224,7 @@ export default function Navbar() {
       <div className="bg-[#185FA5] text-white text-xs py-1.5 text-center">
         <a
           href="https://wa.me/918179688632?text=Hi, I want to enquire about export shipping"
-          className="hover:underline"
+          className="block px-3 leading-relaxed hover:underline"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -231,6 +236,7 @@ export default function Navbar() {
       <nav
         className={cn(
           "sticky top-0 z-40 bg-white transition-shadow",
+          mobileOpen && "z-[60]",
           scrolled && "shadow-md"
         )}
       >
@@ -279,23 +285,63 @@ export default function Navbar() {
 
             {/* Mobile toggle */}
             <button
-              className="lg:hidden p-2 text-[#0F172A]"
+              className="rounded-lg p-2 text-[#0F172A] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#185FA5] lg:hidden"
               onClick={() => setMobileOpen(!mobileOpen)}
               aria-label="Toggle menu"
+              aria-expanded={mobileOpen}
+              aria-controls="mobile-navigation"
             >
               {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
             </button>
           </div>
         </div>
 
-        {/* Mobile menu */}
-        {mobileOpen && (
-          <div className="lg:hidden bg-white border-t border-[#E2E8F0] max-h-[80vh] overflow-y-auto">
-            <div className="px-4 py-4 space-y-1">
+        {/* Mobile slide-out navigation */}
+        <div
+          className={cn(
+            "fixed inset-0 z-[60] bg-slate-950/40 transition-opacity duration-300 lg:hidden",
+            mobileOpen ? "visible opacity-100" : "invisible pointer-events-none opacity-0"
+          )}
+          aria-hidden={!mobileOpen}
+        >
+          <button
+            type="button"
+            className="absolute inset-0 h-full w-full cursor-default"
+            aria-label="Close navigation menu"
+            onClick={() => setMobileOpen(false)}
+          />
+          <aside
+            id="mobile-navigation"
+            className={cn(
+              "absolute inset-y-0 right-0 flex h-full w-[min(88vw,24rem)] flex-col bg-white shadow-2xl transition-transform duration-300 ease-out",
+              mobileOpen ? "translate-x-0" : "translate-x-full"
+            )}
+          >
+            <div className="flex items-center justify-between border-b border-[#E2E8F0] px-5 py-4">
+              <Link
+                href="/"
+                className="flex items-center gap-2 text-lg font-bold text-[#0A1628]"
+                onClick={() => setMobileOpen(false)}
+              >
+                <Globe className="h-5 w-5 text-[#185FA5]" />
+                Ambeza
+              </Link>
+              <button
+                type="button"
+                className="rounded-lg p-2 text-[#0F172A] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#185FA5]"
+                onClick={() => setMobileOpen(false)}
+                aria-label="Close menu"
+              >
+                <X className="h-5 w-5" />
+              </button>
+            </div>
+
+            <div className="flex-1 overflow-y-auto px-5 py-4">
+              <div className="space-y-1">
               {mobileSections.map((section) => (
                 <div key={section.label}>
                   <button
-                    className="flex items-center justify-between w-full py-2 text-sm font-semibold text-[#0F172A]"
+                    className="flex min-h-11 w-full items-center justify-between py-2 text-left text-sm font-semibold text-[#0F172A]"
                     onClick={() =>
                       setMobileExpanded(
                         mobileExpanded === section.label ? null : section.label
@@ -311,12 +357,12 @@ export default function Navbar() {
                     />
                   </button>
                   {mobileExpanded === section.label && (
-                    <div className="pl-4 space-y-1 pb-2">
+                    <div className="space-y-1 border-l border-[#E2E8F0] pb-2 pl-4">
                       {section.links.map(({ href, label, icon: Icon }) => (
                         <Link
                           key={href}
                           href={href}
-                          className="flex items-center gap-3 py-2 text-sm text-[#475569] hover:text-[#185FA5]"
+                          className="flex min-h-10 items-center gap-3 py-2 text-sm text-[#475569] hover:text-[#185FA5]"
                         >
                           <Icon className="h-4 w-4" />
                           {label}
@@ -327,26 +373,28 @@ export default function Navbar() {
                 </div>
               ))}
 
-              <Link href="/industries" className="block py-2 text-sm font-medium text-[#0F172A]">
+              <Link href="/industries" onClick={() => setMobileOpen(false)} className="block min-h-11 py-3 text-sm font-medium text-[#0F172A]">
                 Industries
               </Link>
-              <Link href="/about" className="block py-2 text-sm font-medium text-[#0F172A]">
+              <Link href="/about" onClick={() => setMobileOpen(false)} className="block min-h-11 py-3 text-sm font-medium text-[#0F172A]">
                 About
               </Link>
-              <Link href="/blog" className="block py-2 text-sm font-medium text-[#0F172A]">
+              <Link href="/blog" onClick={() => setMobileOpen(false)} className="block min-h-11 py-3 text-sm font-medium text-[#0F172A]">
                 Blog
               </Link>
-              <div className="pt-2">
+              </div>
+            </div>
+            <div className="border-t border-[#E2E8F0] p-5">
                 <Link
                   href="/contact"
-                  className="block w-full text-center bg-[#185FA5] text-white text-sm font-semibold px-5 py-3 rounded-full"
+                  onClick={() => setMobileOpen(false)}
+                  className="block w-full rounded-full bg-[#185FA5] px-5 py-3.5 text-center text-sm font-semibold text-white"
                 >
                   Get a Free Quote
                 </Link>
-              </div>
             </div>
-          </div>
-        )}
+          </aside>
+        </div>
       </nav>
     </>
   );

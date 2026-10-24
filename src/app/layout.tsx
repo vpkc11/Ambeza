@@ -94,7 +94,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${inter.variable} ${geistMono.variable} h-full w-full max-w-full overflow-x-hidden antialiased`}
     >
       <head>
         <script
@@ -102,9 +102,9 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
-      <body className="min-h-full flex flex-col">
+      <body className="flex min-h-full w-full max-w-full flex-col overflow-x-hidden">
         <Navbar />
-        <main className="flex-1">{children}</main>
+        <main className="w-full max-w-full flex-1 overflow-x-hidden">{children}</main>
         <Footer />
         <WhatsAppFloat />
         <Toaster position="top-right" />

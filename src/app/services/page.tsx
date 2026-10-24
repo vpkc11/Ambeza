@@ -62,7 +62,7 @@ export default function ServicesPage() {
       <section className="bg-gradient-to-br from-[#0A1628] to-[#1e3a5f] text-white py-14">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
-            <h1 className="text-4xl font-bold mb-4">Export Logistics Services</h1>
+            <h1 className="mb-4 text-3xl font-bold sm:text-5xl lg:text-6xl">Export Logistics Services</h1>
             <p className="text-slate-300 text-lg">Everything you need to export from India — under one roof, one invoice, one point of contact.</p>
           </div>
         </div>

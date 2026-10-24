@@ -188,32 +188,32 @@ export default function Home() {
             background: "linear-gradient(to right, rgba(10,22,40,0.97) 0%, rgba(10,22,40,0.85) 40%, rgba(10,22,40,0.35) 65%, rgba(10,22,40,0.0) 100%)",
           }}
         />
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-28">
+        <div className="relative mx-auto w-full max-w-7xl px-4 py-12 sm:px-6 sm:py-20 lg:px-8 lg:py-28">
           <div className="max-w-3xl">
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+            <h1 className="mb-5 text-3xl font-bold leading-tight sm:mb-6 sm:text-5xl lg:text-6xl">
               You make it in India.
               <br />
               <span className="text-[#F59E0B]">We ship it to the world.</span>
             </h1>
-            <p className="text-lg sm:text-xl text-slate-300 mb-8 leading-relaxed">
+            <p className="mb-6 text-sm leading-relaxed text-slate-300 sm:mb-8 sm:text-base lg:text-xl">
               End-to-end export logistics from India to 150+ countries.
               Air freight, ocean freight, customs clearance, all paperwork — one company.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 mb-10">
+            <div className="mb-8 flex flex-col gap-3 sm:mb-10 sm:flex-row sm:gap-4">
               <Link
                 href="/contact"
-                className="bg-[#F59E0B] text-white font-semibold px-8 py-4 rounded-full text-center hover:bg-[#d97706] transition-colors text-lg"
+                className="rounded-full bg-[#F59E0B] px-6 py-3 text-center text-base font-semibold text-white transition-colors hover:bg-[#d97706] sm:px-8 sm:py-4 sm:text-lg"
               >
                 Get a Free Quote
               </Link>
               <Link
                 href="/how-it-works"
-                className="border-2 border-white text-white font-semibold px-8 py-4 rounded-full text-center hover:bg-white hover:text-[#0A1628] transition-colors text-lg"
+                className="rounded-full border-2 border-white px-6 py-3 text-center text-base font-semibold text-white transition-colors hover:bg-white hover:text-[#0A1628] sm:px-8 sm:py-4 sm:text-lg"
               >
                 See How It Works
               </Link>
             </div>
-            <div className="text-slate-400 text-sm">
+            <div className="flex flex-wrap gap-y-1 text-xs text-slate-400 sm:text-sm">
               <span className="text-slate-500">Operating from: </span>
               {[
                 "Mumbai", "Chennai", "Delhi", "Hyderabad", "Kolkata", "Mundra", "Bangalore",
@@ -230,15 +230,15 @@ export default function Home() {
 
       {/* ── Trust Bar ── */}
       <section className="bg-white border-b border-[#E2E8F0]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-[#E2E8F0]">
+        <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 divide-y divide-[#E2E8F0] sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-4">
             {[
               { stat: "150+", label: "Countries we ship to" },
               { stat: "Air + Sea", label: "Both modes covered" },
               { stat: "In-house CHA", label: "Licensed customs agents" },
               { stat: "Zero", label: "Hidden charges" },
             ].map(({ stat, label }) => (
-              <div key={label} className="py-8 px-6 text-center">
+              <div key={label} className="px-4 py-4 text-center sm:px-6 sm:py-6 lg:py-8">
                 <div className="text-2xl font-bold text-[#185FA5] mb-1">{stat}</div>
                 <div className="text-sm text-[#475569]">{label}</div>
               </div>
@@ -249,21 +249,21 @@ export default function Home() {
 
       {/* ── Commercial Air Freight ── */}
       <section className="bg-slate-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16">
+        <div className="mx-auto w-full max-w-7xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
           <div className="max-w-4xl">
             <span className="inline-flex rounded-full bg-amber-500 px-4 py-2 text-xs sm:text-sm font-bold tracking-wide text-slate-950">
               COMMERCIAL AIR CARGO &amp; EXPRESS ALTERNATIVE
             </span>
-            <h2 className="mt-6 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+            <h2 className="mt-4 text-2xl font-bold leading-tight sm:mt-6 sm:text-3xl lg:text-5xl">
               Ship Heavy Air Cargo at{" "}
               <span className="text-amber-400">Wholesale Commercial Rates</span>
             </h2>
-            <p className="mt-5 max-w-3xl text-base sm:text-lg leading-relaxed text-slate-300">
+            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-300 sm:mt-5 sm:text-base lg:text-lg">
               Stop paying inflated retail parcel prices for heavy international shipments. Whether moving commercial cargo, exporter samples, or personal boxes (20kg+), book directly onto commercial airlines from any major airport hub in India.
             </p>
           </div>
 
-          <div className="mt-8 grid gap-3 md:grid-cols-3">
+          <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:mt-8 lg:grid-cols-3">
             {[
               "✓ Up to 40% Cheaper for 20kg+",
               "✓ Direct Airport Hub Pickups (BOM, DEL, HYD, BLR, MAA, CCU)",
@@ -278,7 +278,7 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="mt-6 flex flex-col gap-2 rounded-2xl border border-amber-400/50 bg-amber-400/10 p-5 sm:flex-row sm:items-center sm:justify-between sm:p-6">
+          <div className="mt-4 flex flex-col gap-2 rounded-2xl border border-amber-400/50 bg-amber-400/10 p-4 sm:mt-6 sm:flex-row sm:items-center sm:justify-between sm:p-6">
             <div>
               <p className="text-sm font-bold uppercase tracking-wide text-amber-300">
                 Ambeza agency &amp; CHA fee
@@ -314,7 +314,7 @@ export default function Home() {
       {/* ── What We Do ── */}
       <SectionWrapper className="bg-[#F8FAFC]">
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#0A1628] mb-4">
+          <h2 className="mb-4 text-2xl font-bold text-[#0A1628] sm:text-3xl lg:text-4xl">
             Everything you need to export — handled by one company
           </h2>
           <p className="text-lg text-[#475569] max-w-2xl mx-auto">
@@ -331,7 +331,7 @@ export default function Home() {
               <div className="w-12 h-12 bg-[#185FA5]/10 rounded-xl flex items-center justify-center mb-5">
                 <Icon className="h-6 w-6 text-[#185FA5]" />
               </div>
-              <h3 className="text-xl font-bold text-[#0A1628] mb-3">{title}</h3>
+              <h3 className="mb-3 text-lg font-bold text-[#0A1628] sm:text-xl">{title}</h3>
               <p className="text-[#475569] text-sm leading-relaxed mb-4">{desc}</p>
               <Link
                 href={href}
@@ -347,7 +347,7 @@ export default function Home() {
       {/* ── Journey Preview ── */}
       <SectionWrapper>
         <div className="text-center mb-12">
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#0A1628] mb-4">
+          <h2 className="mb-4 text-2xl font-bold text-[#0A1628] sm:text-3xl lg:text-4xl">
             Your cargo&apos;s journey — from your factory to their door
           </h2>
           <p className="text-[#475569]">Seven steps. We handle all of them.</p>
@@ -393,7 +393,7 @@ export default function Home() {
       {/* ── Industries ── */}
       <SectionWrapper className="bg-[#F8FAFC]">
         <div className="text-center mb-8">
-          <h2 className="text-3xl font-bold text-[#0A1628] mb-3">
+          <h2 className="mb-3 text-2xl font-bold text-[#0A1628] sm:text-3xl lg:text-4xl">
             We ship for every kind of Indian business
           </h2>
           <p className="text-[#475569]">
@@ -416,7 +416,7 @@ export default function Home() {
       {/* ── Tools Promo ── */}
       <SectionWrapper className="bg-[#185FA5]">
         <div className="text-center mb-10">
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-3">
+          <h2 className="mb-3 text-2xl font-bold text-white sm:text-3xl lg:text-4xl">
             Free tools for Indian exporters
           </h2>
           <p className="text-blue-100 text-lg">
@@ -446,7 +446,7 @@ export default function Home() {
       <SectionWrapper>
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-10">
-            <h2 className="text-3xl font-bold text-[#0A1628] mb-3">
+            <h2 className="mb-3 text-2xl font-bold text-[#0A1628] sm:text-3xl lg:text-4xl">
               Questions every first-time exporter asks
             </h2>
             <p className="text-[#475569]">Straight answers, no jargon.</p>
@@ -483,7 +483,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              <h2 className="mb-4 text-2xl font-bold text-white sm:text-3xl lg:text-4xl">
                 Ready to ship your first export?
               </h2>
               <p className="text-slate-300 mb-6 leading-relaxed">

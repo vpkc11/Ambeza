@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { CheckCircle } from "lucide-react";
 import SectionWrapper from "@/components/SectionWrapper";
 
 export const metadata: Metadata = {
@@ -46,8 +45,8 @@ export default function OceanFreightPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <p className="text-[#185FA5] font-semibold text-sm mb-3 uppercase tracking-wider">Services</p>
-            <h1 className="text-4xl font-bold mb-4">Ocean Freight from India</h1>
-            <p className="text-slate-300 text-lg">FCL, LCL, Break Bulk, RORO, ODC — we ship any cargo by sea from any Indian port. Best value for shipments above 500 kg.</p>
+            <h1 className="mb-4 text-3xl font-bold sm:text-5xl lg:text-6xl">Ocean Freight from India</h1>
+            <p className="text-sm text-slate-300 sm:text-base">FCL, LCL, Break Bulk, RORO, ODC — we ship any cargo by sea from any Indian port. Best value for shipments above 500 kg.</p>
           </div>
         </div>
       </section>
@@ -84,7 +83,7 @@ export default function OceanFreightPage() {
 
         <div className="bg-[#F8FAFC] border border-[#E2E8F0] rounded-2xl p-8 mb-8">
           <h2 className="text-xl font-bold text-[#0A1628] mb-5">Ports we operate from</h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-6">
             {[
               { port: "JNPT", city: "Mumbai", rank: "#1 container port in India" },
               { port: "Chennai", city: "Tamil Nadu", rank: "East coast hub" },

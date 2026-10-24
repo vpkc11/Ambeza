@@ -35,7 +35,7 @@ export default function WarehousingPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <p className="text-[#185FA5] font-semibold text-sm mb-3 uppercase tracking-wider">Services</p>
-            <h1 className="text-4xl font-bold mb-4">Warehousing &amp; 3PL for Exports</h1>
+            <h1 className="mb-4 text-3xl font-bold sm:text-5xl lg:text-6xl">Warehousing &amp; 3PL for Exports</h1>
             <p className="text-slate-300 text-lg">Store, pick, pack, label, and dispatch — complete 3PL services for export-ready goods near all major Indian ports and airports.</p>
           </div>
         </div>

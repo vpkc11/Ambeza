@@ -146,7 +146,7 @@ export default function AirlinePartnersPage() {
           </p>
           <div className="max-w-2xl">
             <p className="text-[#185FA5] font-semibold text-sm mb-3 uppercase tracking-wider">Air Freight</p>
-            <h1 className="text-4xl font-bold mb-4">Airline Partners — Carriers We Work With</h1>
+            <h1 className="mb-4 text-3xl font-bold sm:text-5xl lg:text-6xl">Airline Partners — Carriers We Work With</h1>
             <p className="text-slate-300 text-lg">We are not tied to one airline. Ambeza books across a wide network of Indian and international cargo carriers, choosing the one that fits your route, cargo type, certification needs, and timeline best.</p>
           </div>
         </div>
@@ -280,7 +280,7 @@ export default function AirlinePartnersPage() {
       <SectionWrapper>
         <div className="text-center mb-10">
           <h2 className="text-2xl font-bold text-[#0A1628] mb-3">How Ambeza selects carriers</h2>
-          <p className="text-[#475569] max-w-2xl mx-auto">We don't default to the same airline for every shipment. Each booking is matched against these factors to find the right carrier for your specific cargo.</p>
+          <p className="text-[#475569] max-w-2xl mx-auto">We don&apos;t default to the same airline for every shipment. Each booking is matched against these factors to find the right carrier for your specific cargo.</p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {selectionCriteria.map(({ title, desc }) => (
